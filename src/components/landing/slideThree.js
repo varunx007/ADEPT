@@ -4,7 +4,7 @@ import { RiAiGenerate } from "react-icons/ri";
 
 const SlideThree = () => {
     return (
-        <div className="dark:bg-black">
+        <div className="bg-blue-100 dark:bg-black">
             <div className="flex items-center justify-center text-center">
                 <div className="text-4xl font-black dark:text-white max-md:text-2xl">How it works</div>
             </div>

@@ -14,13 +14,13 @@ import { jwtDecode } from "jwt-decode";
 import FacebookLogin from '@greatsumini/react-facebook-login';
 
 const SignIn = () => {
-
     const storedTheme = sessionStorage.getItem('darkMode');
     const [email, setEmail] = useState('');
     const [processing, setProcessing] = useState(false);
     const [password, setPassword] = useState('');
 
     const navigate = useNavigate();
+
     function redirectSignUp() {
         navigate("/signup");
     }
@@ -34,11 +34,9 @@ const SignIn = () => {
     }
 
     useEffect(() => {
-
         if (sessionStorage.getItem('auth')) {
             redirectHome();
         }
-
     }, []);
 
     const showToast = async (msg) => {
@@ -82,10 +80,8 @@ const SignIn = () => {
 
     return (
         <Flowbite>
-            <div className="flex h-screen dark:bg-black no-scrollbar">
-
+            <div className="flex h-screen dark:bg-black bg-blue-100 no-scrollbar"> {/* Added bg-blue-100 */}
                 <div className="flex-1 overflow-y-auto no-scrollbar">
-
                     <Navbar fluid className='p-8 dark:bg-black'>
                         <Navbar.Brand href={websiteURL} className="ml-1">
                             <LogoComponent isDarkMode={storedTheme} />
@@ -95,7 +91,6 @@ const SignIn = () => {
                     </Navbar>
 
                     <form onSubmit={handleSignin} className="max-w-sm m-auto py-9 no-scrollbar">
-
                         <h1 className='text-center font-black text-5xl text-black dark:text-white'>SignIn</h1>
                         <p className='text-center font-normal text-black py-4 dark:text-white'>Enter email & password to continue</p>
 
@@ -113,10 +108,10 @@ const SignIn = () => {
                                 <input onChange={(e) => setPassword(e.target.value)} className='focus:ring-black focus:border-black border border-black font-normal bg-white rounded-none block w-full dark:bg-black dark:border-white dark:text-white' id="password1" type="password" />
                             </div>
                             <div className="flex items-center mb-10">
-                                <p onClick={redirectForgot} className='text-center font-normal text-black underline dark:text-white'>Forgot Password ?</p>
+                                <p onClick={redirectForgot} className='text-center font-normal text-black underline dark:text-white'>Forgot Password?</p>
                             </div>
                             <Button isProcessing={processing} processingSpinner={<AiOutlineLoading className="h-6 w-6 animate-spin" />} className='items-center justify-center text-center dark:bg-white dark:text-black bg-black text-white font-bold rounded-none w-full enabled:hover:bg-black enabled:focus:bg-black enabled:focus:ring-transparent dark:enabled:hover:bg-white dark:enabled:focus:bg-white dark:enabled:focus:ring-transparent' type="submit">Submit</Button>
-                            <p onClick={redirectSignUp} className='text-center font-normal text-black underline py-4  dark:text-white'>Don't have an account ? SignUp</p>
+                            <p onClick={redirectSignUp} className='text-center font-normal text-black underline py-4 dark:text-white'>Don't have an account? SignUp</p>
 
                             <GoogleLogin
                                 theme='outline'
@@ -144,7 +139,6 @@ const SignIn = () => {
                                     } catch (error) {
                                         showToast('Internal Server Error');
                                     }
-
                                 }}
                                 onError={() => {
                                     showToast('Internal Server Error');
@@ -189,9 +183,7 @@ const SignIn = () => {
                                     }
                                 }}
                             />
-
                         </div>
-
                     </form>
                 </div>
 

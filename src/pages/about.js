@@ -1,13 +1,12 @@
 import React from 'react';
 import Header from '../components/header';
 import Footers from '../components/footers';
-import slide from '../res/img/about.svg'
+import slide from '../res/img/about.svg';
 import { useNavigate } from 'react-router-dom';
 import { Button } from 'flowbite-react';
 import { company, name } from '../constants';
 
 const About = () => {
-
     const navigate = useNavigate();
 
     function redirectContact() {
@@ -17,17 +16,17 @@ const About = () => {
     return (
         <div className='h-screen flex flex-col'>
             <Header isHome={false} className="sticky top-0 z-50" />
-            <div className='dark:bg-black flex-1'>
+            <div className='bg-blue-100 dark:bg-black flex-1'> {/* Changed to bg-blue-100 */}
                 <div className='flex-1 flex flex-col items-center justify-center px-3'>
                     <h1 className="text-6xl font-black mt-14 max-md:text-3xl dark:text-white">About</h1>
                     <p className="text-center text-black mt-6 max-w-2xl font-medium max-md:text-xs dark:text-white">
                         Welcome to {name}, the cutting-edge AI Course generator brought to you by {company}!
                     </p>
                 </div>
-                <div className="px-7 max-md:px-3 justify-center items-center pb-10 dark:bg-black mt-14 ">
+                <div className="px-7 max-md:px-3 justify-center items-center pb-10 mt-14">
                     <div className="flex flex-col md:flex-row items-center">
                         <div className="md:w-1/2 h-full p-4 flex flex-col items-center md:items-start justify-center">
-                            <h2 className="text-4xl font-black mb-2 max-md:text-2xl dark:text-white" >About Us</h2>
+                            <h2 className="text-4xl font-black mb-2 max-md:text-2xl dark:text-white">About Us</h2>
                             <p className="text-black mb-2 mt-2 max-md:text-center max-md:text-xs dark:text-white">
                                 At {company}, we believe in the transformative power of education and the endless possibilities that Artificial Intelligence unlocks.
                                 That's why we've developed {name}, a revolutionary SaaS product designed to make course creation seamless, efficient, and intelligent.

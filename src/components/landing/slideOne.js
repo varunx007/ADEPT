@@ -1,5 +1,5 @@
 import React from 'react';
-import slide from '../../res/img/slideOne.png'
+import slide from '../../res/img/slideOne.png';
 import { useNavigate } from "react-router-dom";
 
 const SlideOne = () => {
@@ -13,9 +13,8 @@ const SlideOne = () => {
         navigate("/signup");
     }
 
-
     return (
-        <div className="flex flex-col items-center dark:bg-black">
+        <div className="flex flex-col items-center bg-blue-100 dark:bg-black">
 
             <h1 className="text-6xl font-black mt-20 max-md:text-3xl dark:text-white">Ai Course Generator</h1>
 

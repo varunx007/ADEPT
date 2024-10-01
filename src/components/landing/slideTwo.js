@@ -4,7 +4,7 @@ import { PiStudentFill, PiFeatherFill } from "react-icons/pi";
 
 const SlideTwo = () => {
     return (
-        <div className="px-7 justify-center items-center pb-10 dark:bg-black">
+        <div className="px-7 justify-center items-center bg-blue-100 dark:bg-black">
             <div className="flex flex-col md:flex-row items-center">
 
                 <div className="md:w-1/2 h-full p-4 flex flex-col items-center md:items-start justify-center">
